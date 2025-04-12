@@ -1,0 +1,41 @@
+{% extends "user/layout.html" %}
+
+
+{% block title %}
+    LogIn Page
+{% endblock %}
+
+
+{% block main %}
+<section class="auth-section">
+    <div class="container">
+        <div class="auth-card">
+            <h1>مرحباً بعودتك</h1>
+            <p>الرجاء تسجيل الدخول للوصول إلى حسابك وإدارة مواعيدك</p>
+            
+            <form id="loginForm" class="auth-form">
+                <div class="form-group">
+                    <label for="email">البريد الإلكتروني</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">كلمة المرور</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-options">
+                    <div class="remember-me">
+                        <input type="checkbox" id="remember" name="remember">
+                        <label for="remember">تذكرني</label>
+                    </div>
+                    <a href="#" class="forgot-password">نسيت كلمة المرور؟</a>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">تسجيل الدخول</button>
+            </form>
+            
+            <div class="auth-footer">
+                <p>ليس لديك حساب؟ <a href="signup.html">أنشئ حساباً جديداً</a></p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

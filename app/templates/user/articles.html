@@ -1,0 +1,43 @@
+{% extends "user/layout.html" %}
+
+{% block title %}
+    Services Page
+{% endblock %}
+
+
+{% block main %}
+    
+<section class="articles-section">
+    <div class="container">
+        <h1>المقالات الطبية</h1>
+        <div class="articles-grid">
+            <article class="article-card">
+                <img src="static/images/imrs.webp" alt="صورة المقال">
+                <div class="article-content">
+                    <h3>فهم خيارات العلاج المتاحة</h3>
+                    <p>دليل شامل لأنواع علاجات السرطان المختلفة وما يمكن توقعه من كل نوع</p>
+                    <a href="#" class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                </div>
+            </article>
+            <article class="article-card">
+                <img src="static/images/man-working-in-a-lab.jpg" alt="صورة المقال">
+                <div class="article-content">
+                    <h3>إدارة الآثار الجانبية للعلاج الكيماوي</h3>
+                    <p>نصائح عملية للتعامل مع الآثار الجانبية الشائعة للعلاج الكيماوي</p>
+                    <a href="#" class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                </div>
+            </article>
+            <article class="article-card">
+                <img src="static/images/research.jpg" alt="صورة المقال">
+                <div class="article-content">
+                    <h3>التغذية أثناء علاج السرطان</h3>
+                    <p>كيف تحافظ على التغذية السليمة وتتغلب على التحديات الغذائية أثناء العلاج</p>
+                    <a href="#" class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+    
+    {% endblock %}

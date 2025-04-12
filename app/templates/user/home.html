@@ -1,0 +1,102 @@
+<!-- home page and aboutUs and FAQ -->
+
+{% extends "user/layout.html" %}
+
+{% block title %}
+    Home Page
+{% endblock %}
+
+{% block main %}
+
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <h1>نظام متكامل لمتابعة مواعيد علاج مرضى السرطان</h1>
+            <p>سهولة في جدولة المواعيد، تذكير بالمتابعات، ومتابعة الخطة العلاجية خطوة بخطوة</p>
+            <div class="hero-buttons">
+                <a href="/auth/register" class="btn btn-primary">ابدأ الآن</a>
+                <a href="#features" class="btn btn-outline">المزيد من المعلومات</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            
+            <img src="{{ url_for('static', filename='images/cancerv22.png') }}" alt="طبيب ومريض">
+        </div>
+    </div>
+</section>
+
+<section id="features" class="features">
+    <div class="container">
+        <h2>مميزات نظام نفس</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <i class="fas fa-calendar-check"></i>
+                <h3>حجز المواعيد</h3>
+                <p>إمكانية حجز المواعيد الطبية بسهولة مع الأطباء والمتخصصين</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-bell"></i>
+                <h3>تذكير بالمواعيد</h3>
+                <p>نظام تذكير آلي بالمواعيد عبر الرسائل النصية والبريد الإلكتروني</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-chart-line"></i>
+                <h3>متابعة العلاج</h3>
+                <p>متابعة الخطة العلاجية وتطور الحالة الصحية للمريض</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-book-medical"></i>
+                <h3>موارد تعليمية</h3>
+                <p>الوصول إلى مكتبة من المقالات والموارد الخاصة بمرضى السرطان</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="testimonials">
+    <div class="container">
+        <h2>آراء مستخدمينا</h2>
+        <div class="testimonial-slider">
+            <div class="testimonial active">
+                <p>"نفس ساعدتني في تنظيم مواعيد العلاج الكيماوي ولم أعد أشعر بالقلق من نسيان المواعيد المهمة"</p>
+                <div class="author">
+                    <strong>سارة أحمد</strong>
+                    <span>مريضة سرطان الثدي</span>
+                </div>
+            </div>
+            <div class="testimonial">
+                <p>"كشخص يجد صعوبة في التنظيم أثناء العلاج، كانت هذه الخدمة لا تقدر بثمن"</p>
+                <div class="author">
+                    <strong>محمد خالد</strong>
+                    <span>متعافٍ من سرطان البروستاتا</span>
+                </div>
+            </div>
+            <div class="testimonial">
+                <p>"الراحة التي أشعر بها لمعرفتي أنني لن أنسى المواعيد المهمة تستحق كل شيء"</p>
+                <div class="author">
+                    <strong>ليلى عبدالله</strong>
+                    <span>مريضة سرطان الرئة</span>
+                </div>
+            </div>
+        </div>
+        <div class="slider-controls">
+            <button class="slider-prev"><i class="fas fa-chevron-right"></i></button>
+            <button class="slider-next"><i class="fas fa-chevron-left"></i></button>
+        </div>
+    </div>
+</section>
+
+<section class="cta">
+<div class="container">
+    <h2>هل أنت مستعد للبدء في رحلتك العلاجية بسهولة أكثر؟</h2>
+    <p>انضم إلى آلاف المرضى الذين يديرون علاجهم بفعالية أكبر</p>
+    <div class="cta-buttons">
+        <a href="/auth/register" class="btn btn-primary">سجل الآن</a>
+        <a href="admin-login.html" class="btn btn-admin">
+            <i class="fas fa-shield-alt"></i> دخول المسؤول
+        </a>
+    </div>
+</div>
+</section>
+
+{% endblock %}

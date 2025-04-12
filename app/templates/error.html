@@ -1,0 +1,51 @@
+<!-- error.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Error - Something Went Wrong</title>
+  <style>
+    body {
+      background-color: #f8d7da;
+      color: #721c24;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+    .container {
+      background-color: #f5c6cb;
+      border: 1px solid #f5c2c7;
+      border-radius: 10px;
+      padding: 30px;
+      max-width: 500px;
+      margin: auto;
+    }
+    h1 {
+      font-size: 36px;
+    }
+    p {
+      font-size: 20px;
+    }
+    .back-btn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #721c24;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .back-btn:hover {
+      background-color: #5a1a1d;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Error</h1>
+    <p>{{ error_message }}</p>
+    <a href="{{ url_for('your_form_or_login_route') }}" class="back-btn">Go Back</a>
+  </div>
+</body>
+</html>

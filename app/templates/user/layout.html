@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %}<title>نفس - نظام متابعة مواعيد مرضى السرطان</title>{% endblock %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="logo">
+                
+                <img src="{{ url_for('static', filename='images/نفس.svg') }}" alt="شعار نفس">
+                
+            </a>
+            <div class="nav-links">
+                {% if session["user_id"] %}
+                
+                <a href="/" class="active">الرئيسية</a>
+                <a href="/articles">المقالات</a>
+                <a href="/faq">الأسئلة الشائعة</a>
+                <a href="/aboutUs">من نحن</a>
+                <a href="/userProfile">الملف الشخصي</a>
+                <div class="auth-buttons">
+                    <a href="login.html" class="btn btn-primary">تسجيل الخروج</a>
+                {% else %}
+                <a href="/" class="active">الرئيسية</a>
+                <a href="/articles">المقالات</a>
+                <a href="/faq">الأسئلة الشائعة</a>
+                <a href="/aboutUs">من نحن</a>
+                <div class="auth-buttons">
+                    <a href="/auth/register" class="btn btn-outline">إنشاء حساب</a>
+                    <a href="/auth/userLogin" class="btn btn-primary">تسجيل الدخول</a>
+                </div>
+                
+                    {% endif %}
+                </div>
+                <button class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    <main>
+        {% block main %}{% endblock %}
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>نفس</h3>
+                    <p>نظام متابعة مواعيد مرضى السرطان لتحسين جودة الرعاية الصحية</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>روابط سريعة</h3>
+                    <ul>
+                        <li><a href="/">الرئيسية</a></li>
+                        <li><a href="/articles">المقالات</a></li>
+                        <li><a href="/faq">الأسئلة الشائعة</a></li>
+                        <li><a href="/aboutUs">من نحن</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>الموارد</h3>
+                    <ul>
+                        <li><a href="#">قصص المرضى</a></li>
+                        <li><a href="#">خيارات العلاج</a></li>
+                        <li><a href="#">مجموعات الدعم</a></li>
+                        <li><a href="#">التجارب السريرية</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>اتصل بنا</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> الرياض، المملكة العربية السعودية</li>
+                        <li><i class="fas fa-phone"></i> 966112345678+</li>
+                        <li><i class="fas fa-envelope"></i> info@nafs-care.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 نفس. جميع الحقوق محفوظة.</p>
+                <div class="footer-links">
+                    <a href="#">سياسة الخصوصية</a>
+                    <a href="#">شروط الخدمة</a>
+                    <a href="#">خريطة الموقع</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

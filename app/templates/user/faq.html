@@ -1,0 +1,36 @@
+{% extends "user/layout.html" %}
+
+
+{% block title %}
+    about us Page
+{% endblock %}
+
+
+{% block main %}
+    <section class="faq-section">
+        <div class="container">
+            <h1>الأسئلة الشائعة</h1>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        كيف اقوم بحجز موعد؟
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>بعد إنشاء حساب، يمكنك جدولة المواعيد بالنقر على زر "حجز موعد" في لوحة التحكم. ستتمكن من اختيار مقدم الخدمة، واختيار الفترة الزمنية المتاحة، وتلقي تأكيد الحجز.                            .</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        هل معلوماتي الطبية آمنة؟
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>نعم، نستخدم تشفيرًا وتدابير أمان قياسية في هذا المجال لحماية جميع معلوماتك الصحية. منصتنا متوافقة مع قانون HIPAA، ولا نشارك بياناتك أبدًا دون موافقتك.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

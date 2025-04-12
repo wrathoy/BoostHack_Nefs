@@ -1,0 +1,56 @@
+<!-- reservetion tab with timer and form to submit  -->
+{% extends "user/layout.html" %}
+
+{% block title %}
+    Services Page
+{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/stylesSE.css') }}">
+{% endblock %}
+
+{% block main %}
+
+
+    {% if state == 'new' %}
+        <h2>Book Your Appointment</h2>
+        <form method="post">
+            <label>Age:</label>
+            <input type="number" name="age" required><br>
+            <label>Reason:</label>
+            <textarea name="reason" required></textarea><br>
+            <button type="submit">Submit Reservation</button>
+        </form>
+
+    {% elif state == 'pending' %}
+        <h2>Your reservation is pending.</h2>
+        <p>Please wait while we process your request.</p>
+
+    {% elif state == 'confirmed' %}
+        <h2>Your appointment is confirmed!</h2>
+        <p>Estimated Time: {{ estimated_time }}</p>
+        {% set total_seconds = countdown.total_seconds() | int %}
+        {% set h = total_seconds // 3600 %}
+        {% set m = (total_seconds % 3600) // 60 %}
+        {% set s = total_seconds % 60 %}
+
+        <div style="font-size: 24px; font-weight: bold;">
+        ⏱️ Time Remaining:
+        <span style="display: inline-block; width: 40px; text-align: center; border: 1px solid #ccc; margin: 0 5px;">
+            {{ "%02d"|format(h) }}
+        </span> :
+        <span style="display: inline-block; width: 40px; text-align: center; border: 1px solid #ccc; margin: 0 5px;">
+            {{ "%02d"|format(m) }}
+        </span> :
+        <span style="display: inline-block; width: 40px; text-align: center; border: 1px solid #ccc; margin: 0 5px;">
+            {{ "%02d"|format(s) }}
+        </span>
+        </div>
+
+        <a href="{{ url_for('reservation.download_receipt') }}">📄 Download PDF Receipt</a>
+    {% else %}
+        <h2>Invalid state.</h2>
+    {% endif %}
+
+
+{% endblock %}
