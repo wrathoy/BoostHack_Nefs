@@ -29,7 +29,7 @@ Jinja2 — Templating engine (rendering pages)
 Clone the project bash Copy Edit git clone https://github.com/your-username/nefs-backend.git cd nefs-backend
 Create virtual environment (optional but recommended) bash Copy Edit python -m venv venv source venv/bin/activate # On Windows: venv\Scripts\activate
 Install requirements bash Copy Edit pip install -r requirements.txt
-Run the server bash Copy Edit ## **python run.py** Server will start on http://127.0.0.1:5000
+Run the server bash Copy Edit  **python run.py** Server will start on http://127.0.0.1:5000
 
 ## Future Improvements:
 
